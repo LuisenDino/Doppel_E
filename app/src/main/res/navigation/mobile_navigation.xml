@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    >
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.example.doppel_e.ToDoListFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_to_do_list"
+        />
+    <fragment
+        android:id="@+id/navigation_points"
+        android:name="com.example.doppel_e.PointsFragment"
+        android:label="@string/title_points"
+        tools:layout="@layout/fragment_points"
+        />
+
+
+</navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/taskText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Tareas"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"
+        android:textSize="32sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/taskRecyclerview"
+        android:layout_below="@id/taskText"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:nestedScrollingEnabled="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/taskRecyclerview"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/taskET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
